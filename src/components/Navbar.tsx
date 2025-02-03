@@ -11,6 +11,7 @@ const Navbar = ({ isDark, toggleIsDark }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="backdrop-blur-2xl sticky top-0 right-0 ">
+      smmmm
       <div className="container mx-auto  flex items-center justify-between left-0 py-4 px-4">
         <div className=" icon">
           <FaBolt className="text-xl" />
