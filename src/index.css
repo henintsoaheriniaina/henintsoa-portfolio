@@ -17,7 +17,7 @@ html {
 }
 @layer components {
   .section {
-    @apply min-h-[70vh] container mx-auto px-4  pt-[70px];
+    @apply min-h-[70vh] max-w-7xl mx-auto px-4  pt-32;
   }
 
   .nav-link,

@@ -13,7 +13,7 @@ const HeroSection = () => {
         <h3 className="text-xl sm:text-2xl md:text-3xl  md:text-left font-medium">
           Henintsoa Heriniaina
         </h3>
-        <h1 className="font-black text-3xl sm:text-5xl  md:text-left leading-tight">
+        <h1 className="font-black text-3xl sm:text-5xl text-center  md:text-left xl:text-center leading-tight">
           Dévellopeur web & Mobile
         </h1>
         <div className="flex items-center justify-center md:text-left  md:justify-start  gap-4">

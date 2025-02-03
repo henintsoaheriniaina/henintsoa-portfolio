@@ -42,26 +42,28 @@ const App = () => {
 
   return (
     <div
-      className={`${isDark && "dark"} min-h-screen w-full space-y-4 relative 
-      bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50
-      bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)] 
-      dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.08)_1px,transparent_1px)] 
-      bg-[size:50px_50px] bg-fixed`}
+      className={`${isDark && "dark"} min-h-screen w-full space-y-4 relative
+    bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-50
+    bg-[radial-gradient(circle,rgba(0,0,0,0.3)1.5px,transparent_1.5px)] 
+    dark:bg-[radial-gradient(circle,rgba(255,255,255,0.3)1.5px,transparent_1.5px)] 
+    bg-[size:2rem_2rem]  
+    bg-fixed`}
     >
-      <Navbar
-        isDark={isDark}
-        toggleIsDark={toggleIsDark}
-        activeSection={activeSection}
-      />
-
-      <HeroSection />
-      <Skills />
-      <section className="section " id="projects">
-        <h2>Projets</h2>
-      </section>
-      <section className="section  " id="about">
-        <h2>À propos</h2>
-      </section>
+      <div className="bg-radial-[at_50%_0%]  from-neutral-50 dark:from-neutral-800 from-30% to-transparent  bg-fixed ">
+        <Navbar
+          isDark={isDark}
+          toggleIsDark={toggleIsDark}
+          activeSection={activeSection}
+        />
+        <HeroSection />
+        <Skills />
+        <section className="section " id="projects">
+          <h2>Projets</h2>
+        </section>
+        <section className="section  " id="about">
+          <h2>À propos</h2>
+        </section>
+      </div>
     </div>
   );
 };
