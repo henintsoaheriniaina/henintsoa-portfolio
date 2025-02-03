@@ -13,35 +13,42 @@ html {
 
 * {
   font-family: var(--font-poppins);
-  @apply transition duration-300;
 }
 @layer components {
   .section {
-    @apply min-h-[70vh] max-w-5xl mx-auto   px-4;
+    @apply min-h-[70vh] container mx-auto px-4  pt-[70px];
   }
 
   .nav-link,
   .nav-link-mobile {
-    @apply capitalize text-neutral-500 dark:text-neutral-400 leading-5;
+    @apply capitalize text-neutral-500 dark:text-neutral-400 leading-tight;
   }
   .nav-link {
     @apply mx-2 border-b-2 border-b-transparent;
   }
   .nav-link-mobile.active,
   .nav-link.active {
-    @apply text-neutral-50 dark:text-neutral-800;
+    @apply text-amber-50 dark:text-neutral-800;
   }
+
   .icon {
     @apply text-xl bg-neutral-800 text-neutral-50 dark:bg-neutral-50 dark:text-neutral-800 p-2 rounded-md cursor-pointer hover:scale-105;
   }
   .profil {
     background: url("assets/portrait.jpg");
-    background-size: contain;
+    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     animation: animate_profil 5s infinite alternate ease-in-out;
   }
   .contact-icon {
-    @apply block;
+    @apply text-xl  text-neutral-800 dark:text-neutral-50 py-2 px-1 rounded-md cursor-pointer transition duration-300;
+  }
+  .contact-icon:hover {
+    @apply scale-105;
+  }
+  .action-button {
+    @apply text-center px-6 py-3 font-semibold rounded-lg min-w-60 border-2 md:w-fit hover:scale-105 transition duration-300;
   }
 }
 

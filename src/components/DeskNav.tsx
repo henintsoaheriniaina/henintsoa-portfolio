@@ -11,7 +11,7 @@ const DeskNav = ({ active }: Props) => {
         href="#skills"
         className={`nav-link ${active === "skills" && "active"} `}
       >
-        Compétencs
+        Compétences
       </a>
       <a
         href="#projects"

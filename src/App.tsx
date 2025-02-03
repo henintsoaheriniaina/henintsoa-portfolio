@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
 export type Nav = "hero" | "about" | "skills" | "projects";
 const App = () => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDark, setIsDark] = useState(true);
   const toggleIsDark = () => {
     setIsDark((p) => !p);
   };
@@ -29,7 +30,7 @@ const App = () => {
           setActiveSection(visibleSection.target.id);
         }
       },
-      { threshold: 0.9 }
+      { threshold: 0.5 }
     );
     sections.forEach((section) => observer.observe(section));
     return () => sections.forEach((section) => observer.unobserve(section));
@@ -47,9 +48,7 @@ const App = () => {
         activeSection={activeSection}
       />
       <HeroSection />
-      <section className="section" id="skills">
-        Compétence
-      </section>
+      <Skills />
       <section className="section" id="projects">
         Projets
       </section>
