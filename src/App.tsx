@@ -29,7 +29,7 @@ const App = () => {
           setActiveSection(visibleSection.target.id);
         }
       },
-      { threshold: 0.6 }
+      { threshold: 0.9 }
     );
     sections.forEach((section) => observer.observe(section));
     return () => sections.forEach((section) => observer.unobserve(section));

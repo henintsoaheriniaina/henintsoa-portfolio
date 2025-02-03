@@ -17,7 +17,7 @@ html {
 }
 @layer components {
   .section {
-    @apply min-h-screen container mx-auto  pt-[72px] px-4;
+    @apply min-h-[70vh] max-w-5xl mx-auto   px-4;
   }
 
   .nav-link,
@@ -33,5 +33,26 @@ html {
   }
   .icon {
     @apply text-xl bg-neutral-800 text-neutral-50 dark:bg-neutral-50 dark:text-neutral-800 p-2 rounded-md cursor-pointer hover:scale-105;
+  }
+  .profil {
+    background: url("assets/portrait.jpg");
+    background-size: contain;
+    background-position: center;
+    animation: animate_profil 5s infinite alternate ease-in-out;
+  }
+  .contact-icon {
+    @apply block;
+  }
+}
+
+@keyframes animate_profil {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
   }
 }

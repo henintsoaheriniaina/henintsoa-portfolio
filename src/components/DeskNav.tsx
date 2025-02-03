@@ -3,7 +3,7 @@ type Props = {
 };
 const DeskNav = ({ active }: Props) => {
   return (
-    <div className="hidden md:flex gap-4 bg-neutral-800 dark:bg-neutral-50  p-2 rounded-md mr-4">
+    <div className="hidden md:flex gap-4 bg-neutral-800 dark:bg-neutral-50  p-2 rounded-md mr-4 ">
       <a href="#hero" className={`nav-link ${active === "hero" && "active"} `}>
         Accueil
       </a>
