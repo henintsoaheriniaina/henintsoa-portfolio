@@ -1,13 +1,10 @@
-import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 type Props = {
   isMenuOpen: boolean;
   setIsMenuOpen: () => void;
+  active: string;
 };
-const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
-  const [active, setActive] = useState<
-    "hero" | "about" | "skills" | "projects"
-  >("hero");
+const MobileNav = ({ isMenuOpen, setIsMenuOpen, active }: Props) => {
   return (
     <div className="relative md:hidden ">
       <div className="icon" onClick={setIsMenuOpen}>
@@ -18,28 +15,24 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen }: Props) => {
           <a
             href="#hero"
             className={`nav-link-mobile ${active === "hero" && "active"} `}
-            onClick={() => setActive("hero")}
           >
             Accueil
           </a>
           <a
             href="#skills"
             className={`nav-link-mobile ${active === "skills" && "active"} `}
-            onClick={() => setActive("skills")}
           >
             Compétencs
           </a>
           <a
             href="#projects"
             className={`nav-link-mobile ${active === "projects" && "active"} `}
-            onClick={() => setActive("projects")}
           >
             Projets
           </a>
           <a
             href="#about"
             className={`nav-link-mobile ${active === "about" && "active"} `}
-            onClick={() => setActive("about")}
           >
             à propos
           </a>

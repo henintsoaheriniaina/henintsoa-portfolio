@@ -6,8 +6,9 @@ import MobileNav from "./MobileNav";
 type Props = {
   isDark: boolean;
   toggleIsDark: () => void;
+  activeSection: string;
 };
-const Navbar = ({ isDark, toggleIsDark }: Props) => {
+const Navbar = ({ isDark, toggleIsDark, activeSection }: Props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="backdrop-blur-2xl sticky top-0 right-0 ">
@@ -16,8 +17,9 @@ const Navbar = ({ isDark, toggleIsDark }: Props) => {
           <FaBolt className="text-xl" />
         </div>
         <div className="flex items-center justify-center gap-2">
-          <DeskNav />
+          <DeskNav active={activeSection} />
           <MobileNav
+            active={activeSection}
             isMenuOpen={isMenuOpen}
             setIsMenuOpen={() => setIsMenuOpen((p) => !p)}
           />
