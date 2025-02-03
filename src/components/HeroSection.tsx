@@ -14,7 +14,7 @@ const HeroSection = () => {
           Henintsoa Heriniaina
         </h3>
         <h1 className="font-black text-3xl sm:text-5xl  md:text-left leading-tight">
-          Aleo aloha tsy zao
+          Dévellopeur web & Mobile
         </h1>
         <div className="flex items-center justify-center md:text-left  md:justify-start  gap-4">
           <a

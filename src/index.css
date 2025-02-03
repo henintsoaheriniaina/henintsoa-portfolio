@@ -10,9 +10,10 @@
 html {
   scroll-behavior: smooth;
 }
-
-* {
-  font-family: var(--font-poppins);
+@layer base {
+  * {
+    font-family: var(--font-poppins);
+  }
 }
 @layer components {
   .section {
