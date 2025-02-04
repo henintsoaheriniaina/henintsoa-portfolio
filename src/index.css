@@ -17,12 +17,12 @@ html {
 }
 @layer components {
   .section {
-    @apply min-h-[70vh] max-w-7xl mx-auto px-4  pt-32;
+    @apply min-h-screen max-w-7xl mx-auto px-4  pt-32;
   }
 
   .nav-link,
   .nav-link-mobile {
-    @apply capitalize text-neutral-500 dark:text-neutral-400 leading-tight;
+    @apply capitalize text-neutral-300 dark:text-neutral-400 leading-tight;
   }
   .nav-link {
     @apply mx-2 border-b-2 border-b-transparent;

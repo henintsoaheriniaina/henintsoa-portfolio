@@ -4,7 +4,6 @@ import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 import Skills from "./components/Skills";
 
-export type Nav = "hero" | "about" | "skills" | "projects";
 const App = () => {
   const [isDark, setIsDark] = useState(true);
   const toggleIsDark = () => {
@@ -21,9 +20,7 @@ const App = () => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
-  }, [location]);
 
-  useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       let currentSection = "";
@@ -34,11 +31,34 @@ const App = () => {
         }
       });
       setActiveSection(currentSection);
+
+      const scrollDown = window.scrollY;
+      const sectionsWithId = document.querySelectorAll("section[id]");
+
+      sectionsWithId.forEach((current) => {
+        const section = current as HTMLElement;
+        const sectionHeight = section.offsetHeight;
+        const sectionTop = section.offsetTop - 200;
+        const sectionId = section.getAttribute("id");
+        const sectionsClass = document.querySelector(
+          "a[href*=" + sectionId + "]"
+        );
+
+        if (
+          scrollDown > sectionTop &&
+          scrollDown <= sectionTop + sectionHeight
+        ) {
+          sectionsClass!.classList.add("active");
+        } else {
+          sectionsClass!.classList.remove("active");
+        }
+      });
     };
+
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [location]);
 
   return (
     <div
@@ -49,7 +69,7 @@ const App = () => {
     bg-[size:2rem_2rem]  
     bg-fixed`}
     >
-      <div className="bg-radial-[at_50%_0%]  from-neutral-50 dark:from-neutral-800 from-30% to-transparent  bg-fixed ">
+      <div className="bg-radial-[at_20%_0%]  from-neutral-50 dark:from-neutral-800 from-30% to-transparent  bg-fixed ">
         <Navbar
           isDark={isDark}
           toggleIsDark={toggleIsDark}

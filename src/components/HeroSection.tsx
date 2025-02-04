@@ -3,7 +3,7 @@ import { FiGithub, FiMail, FiPhone } from "react-icons/fi";
 const HeroSection = () => {
   return (
     <section
-      className="section flex flex-col md:flex-row justify-center md:justify-between items-center gap-12 md:gap-4 "
+      className="max-w-7xl mx-auto px-4  pt-32 min-h-[-70vh] flex flex-col md:flex-row justify-center md:justify-between items-center gap-12 md:gap-4 "
       id="hero"
     >
       <div className="order-1 w-full md:w-1/2 flex items-center justify-center md:order-2">
