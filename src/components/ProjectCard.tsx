@@ -7,7 +7,7 @@ import Stack from "./Stack";
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <motion.div className=" text-neutral-800  dark:text-neutral-50  flex flex-col justify-between gap-12 max-w-md mx-auto relative h-[540px] group cursor-pointer w-full rounded-xl overflow-hidden ">
-      <div className="flex gap-2 flex-wrap items-center absolute -top-full left-0 right-0 p-4 group-hover:top-0 transition-all duration-400 ease-in-out">
+      <div className="flex gap-2 flex-wrap items-center absolute sm:-top-full left-0 right-0 p-4 sm:group-hover:top-0 transition-all duration-400 ease-in-out">
         {project.stack.map((s) => (
           <Stack key={s} stack={s} />
         ))}
