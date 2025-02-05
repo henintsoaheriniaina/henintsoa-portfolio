@@ -43,41 +43,6 @@ const HeroSection = () => {
           </a>
         </div>
       </div>
-      {/* <div className="w-full order-2 md:order-1 md:w-1/2 text-neutral-800 dark:text-neutral-50 text-center  space-y-6">
-        <h3 className="text-xl sm:text-2xl md:text-3xl  md:text-left font-medium">
-          Henintsoa Heriniaina
-        </h3>
-        <h1 className="font-black text-3xl sm:text-5xl  md:text-left leading-tight">
-          Aleo aloha tsy zao
-        </h1>
-
-        <div className="flex items-center justify-center md:text-left  md:justify-start  gap-4">
-          <a
-            href="https://github.com/henintsoaheriniaina"
-            target="_blank"
-            className="contact-icon"
-          >
-            <FiGithub />
-          </a>
-          <a href="#" target="_blank" className="contact-icon">
-            <FiMail />
-          </a>
-          <a href="#" target="_blank" className="contact-icon">
-            <FiPhone />
-          </a>
-        </div>
-        <div className="flex flex-row flex-wrap items-center justify-center md:items-start md:justify-start gap-4">
-          <a
-            href="#portfolio"
-            className="action-button border-neutral-800 bg-neutral-800 text-neutral-50 dark:border-neutral-50 dark:bg-neutral-50 dark:text-neutral-800 "
-          >
-            Télecharger mon CV
-          </a>
-          <a href="#contact" className="action-button ">
-            Me contacter
-          </a>
-        </div>
-      </div> */}
     </section>
   );
 };

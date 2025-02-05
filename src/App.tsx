@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 
 const App = () => {
@@ -77,9 +78,7 @@ const App = () => {
         />
         <HeroSection />
         <Skills />
-        <section className="section " id="projects">
-          <h2>Projets</h2>
-        </section>
+        <Projects />
         <section className="section  " id="about">
           <h2>À propos</h2>
         </section>
