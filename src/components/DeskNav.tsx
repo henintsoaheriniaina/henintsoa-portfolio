@@ -8,6 +8,12 @@ const DeskNav = ({ active }: Props) => {
         Accueil
       </a>
       <a
+        href="#about"
+        className={`nav-link ${active === "about" && "active"} `}
+      >
+        à propos
+      </a>
+      <a
         href="#skills"
         className={`nav-link ${active === "skills" && "active"} `}
       >
@@ -18,12 +24,6 @@ const DeskNav = ({ active }: Props) => {
         className={`nav-link ${active === "projects" && "active"} `}
       >
         Projets
-      </a>
-      <a
-        href="#about"
-        className={`nav-link ${active === "about" && "active"} `}
-      >
-        à propos
       </a>
     </div>
   );

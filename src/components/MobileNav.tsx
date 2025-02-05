@@ -41,6 +41,13 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, active }: Props) => {
             Accueil
           </a>
           <a
+            href="#about"
+            className={`nav-link-mobile ${active === "about" && "active"}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            À propos
+          </a>
+          <a
             href="#skills"
             className={`nav-link-mobile ${active === "skills" && "active"}`}
             onClick={() => setIsMenuOpen(false)}
@@ -53,13 +60,6 @@ const MobileNav = ({ isMenuOpen, setIsMenuOpen, active }: Props) => {
             onClick={() => setIsMenuOpen(false)}
           >
             Projets
-          </a>
-          <a
-            href="#about"
-            className={`nav-link-mobile ${active === "about" && "active"}`}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            À propos
           </a>
         </div>
       )}

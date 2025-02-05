@@ -77,11 +77,11 @@ const App = () => {
           activeSection={activeSection}
         />
         <HeroSection />
-        <Skills />
-        <Projects />
         <section className="section  " id="about">
           <h2>À propos</h2>
         </section>
+        <Skills />
+        <Projects />
       </div>
     </div>
   );
