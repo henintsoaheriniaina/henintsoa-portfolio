@@ -36,7 +36,7 @@ html {
     @apply text-xl bg-neutral-800 text-neutral-50 dark:bg-neutral-50 dark:text-neutral-800 p-2 rounded-md cursor-pointer hover:scale-105;
   }
   .profil {
-    background: url("assets/portrait.jpg");
+    background: url("assets/167649335.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
